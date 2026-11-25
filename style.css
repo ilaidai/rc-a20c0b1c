@@ -5,3 +5,32 @@
 @media(max-width:750px){.mobile-nav button{font-size:10px;padding:9px 4px;min-width:42px}}
 
 .recipe-photo{width:calc(100% + 44px);height:210px;object-fit:cover;margin:-22px -22px 19px;border-radius:16px 16px 0 0;background:#eef0e7;cursor:pointer}.recipe-gallery{margin:24px 0}.recipe-hero-photo{display:block;width:100%;max-height:480px;object-fit:contain;background:#f4f3ec;border-radius:16px}.recipe-photo-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:12px 0}.recipe-photo-grid img{width:100%;height:180px;object-fit:contain;background:#f4f3ec;border-radius:12px}.recipe-gallery .muted{font-size:11px;margin:10px 0 0}@media(max-width:750px){.recipe-photo{width:calc(100% + 34px);height:155px;margin:-17px -17px 15px}.recipe-photo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.recipe-photo-grid img{height:145px}.recipe-hero-photo{max-height:360px}}
+
+/* 933: movil compacto (buscador en la primera pantalla, menu legible) */
+@media(max-width:750px){.intro{padding:18px 20px;border-radius:18px}.intro:after{display:none}.intro h1{font-size:30px;line-height:1.1;margin:.2em 0}.intro>p:not(.overline){display:none}.intro .stats{margin-top:10px}.mobile-nav{justify-content:flex-start;-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent)}.mobile-nav button{font-size:13px!important;min-height:44px;padding:10px 12px!important;flex:0 0 auto}}
+
+/* 2026-11-25: inicio con Mis libros / Bonos, candados y desbloqueo */
+body.on-inicio .intro{display:none}
+.hello{margin:4px 0 14px}.hello h1{font-size:30px;line-height:1.1;margin:0 0 4px;color:#154c3b}
+.tabs{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 18px;position:sticky;top:0;z-index:5;background:#f8f7f1;padding:6px 0}
+.tabbtn{font-size:17px!important;font-weight:700;min-height:58px;border-radius:16px!important;border:2px solid #154c3b!important;background:#fff!important;color:#154c3b!important}
+.tabbtn.on{background:#154c3b!important;color:#fff!important}
+.sub{font-size:19px;margin:26px 0 12px;color:#154c3b}.sub small{font-size:13px;color:#7a7a72;font-weight:500}
+.prod-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px}
+.prod,.bono{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.08);display:flex;flex-direction:column}
+.prod-cover{position:relative;aspect-ratio:1/1;background:#eef0e8}
+.prod-cover img{width:100%;height:100%;object-fit:cover;display:block}
+.locked .prod-cover img,.locked .tile-ph{filter:grayscale(.85) brightness(.82);opacity:.6}
+.lock{position:absolute;top:8px;right:8px;background:rgba(255,255,255,.92);border-radius:50%;width:34px;height:34px;display:grid;place-items:center;font-size:17px;box-shadow:0 1px 4px rgba(0,0,0,.2)}
+.prod-body{padding:10px 12px 12px;display:flex;flex-direction:column;gap:6px;flex:1}
+.prod-body h3{font-size:15px;line-height:1.25;margin:0}.prod-body .muted{font-size:12.5px;margin:0}
+.prod-body .row{margin-top:auto;gap:6px}.prod-body .row>*{flex:1}
+.price{margin:auto 0 0;font-size:12px;color:#8a8a80}
+.buy{display:block;text-align:center;background:#dba934;color:#123d30;font-weight:700;font-size:14px;padding:11px 8px;border-radius:12px;text-decoration:none;margin-top:auto}
+.buy:active{transform:scale(.98)}
+a.btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;padding:10px 12px;border-radius:12px;font-weight:600;font-size:14px}
+a.primary.btn{background:#154c3b;color:#fff}a.ghost,.ghost{background:#fff;border:1px solid #cfd3c6;color:#154c3b}
+.tile-ph{width:100%;height:100%;display:grid;place-items:center;background:linear-gradient(135deg,#154c3b,#2d7a5f);color:#fff;font-weight:700;font-size:15px;text-align:center;padding:14px;box-sizing:border-box}
+.bgroup+.bgroup{margin-top:8px}
+.install{background:#fff8e8;border:1px solid #f0d9a5;border-radius:14px;padding:12px 14px;margin:0 0 16px}.install p{margin:0 0 8px;font-size:14px}.ios-share{font-size:16px}
+.lockbox{text-align:center}.lockbox img{max-width:180px;border-radius:14px;opacity:.7;filter:grayscale(.6)}.lockbox .buy{max-width:320px;margin:14px auto 0}
