@@ -86,3 +86,4 @@ img[data-src]:not([src]){color:transparent;font-size:0}
 .phone{height:170px;background:linear-gradient(#fff 0 18px,#eef1e6 18px 40px,#fff 40px)}
 @keyframes sheet{0%,25%{bottom:-120px}35%,90%{bottom:40px}100%{bottom:-120px}}
 @media (prefers-reduced-motion:reduce){.phone .sheet{bottom:40px}}
+.vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}

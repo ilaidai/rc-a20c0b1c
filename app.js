@@ -69,7 +69,7 @@ function inicio(){
  const hello=`<section class="hello"><h1>Hola${NAME?', '+esc(NAME):''}</h1><p class="muted">${mine.length===1?'Tienes 1 libro':'Tienes '+mine.length+' libros'} · funciona también sin conexión</p><button class="recover-link" data-recover>¿No ves tus compras? <u>Recupéralas</u></button></section>`;
  const tabs=`<div class="tabs" role="tablist"><button role="tab" class="tabbtn ${tab==='libros'?'on':''}" data-tab="libros" aria-selected="${tab==='libros'}">📚 Mis libros</button><button role="tab" class="tabbtn ${tab==='bonos'?'on':''}" data-tab="bonos" aria-selected="${tab==='bonos'}">🎁 Bonos</button></div>`;
  let body;
- if(tab==='libros')body=`<div class="prod-grid">${mine.map(prodCard).join('')}</div>`+installBox()+(rest.length?`<h2 class="sub">Amplía tu cocina</h2><div class="prod-grid">${rest.map(prodCard).join('')}</div>`:'');
+ if(tab==='libros')body=`<h2 class="vh">Mis libros</h2><div class="prod-grid">${mine.map(prodCard).join('')}</div>`+installBox()+(rest.length?`<h2 class="sub">Amplía tu cocina</h2><div class="prod-grid">${rest.map(prodCard).join('')}</div>`:'');
  else{const gs=[...TD.bonos].sort((a,b)=>own(b.h)-own(a.h));body=gs.map(g=>{const p=PROD.get(g.h),ok=own(g.h);return `<section class="bgroup"><h2 class="sub">Bonos de ${esc(p.t)} <small>${g.items.length}</small></h2><div class="prod-grid">${g.items.map(it=>bonoTile(it,ok,p)).join('')}</div></section>`}).join('')}
  return hello+tabs+body}
 function lockedRecetario(){const p=PROD.get('2000');return `<div class="empty lockbox"><img src="${p.img}" alt=""><h2>${esc(p.t)}</h2><p>Recetas, buscador por ingrediente, menú semanal y lista de la compra.</p>${buyBtn(p)}</div>`}
